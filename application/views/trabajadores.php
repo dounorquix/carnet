@@ -47,14 +47,13 @@
 
 
 
-                    <!-- Profile Image -->
-                    <div id="fich_trab" class="card card-primary card-outline">
+            <!-- Profile Image -->
+			<div id="fich_trab" class="card card-primary card-outline">
                         <div class="card-body box-profile">
                             <div id="fot_tra" class="text-center">
-							<div id="fot_tra" class="text-center">
                                 <?php if (@$filtr != null || @$filtr == null and @$filtr->fot_tra != null) {?>
-                                <img src="<?php print pg_unescape_bytea(@$filtr->fot_tra);?>" width="100"
-                                    height="100">
+                                <img src="<?php print pg_unescape_bytea(@$filtr->fot_tra);?>" width="150"
+                                    height="150">
                                 <?php } else {?>
                                 <img src='<?php print base_url() . "public/img/perfil.jpg";?>' alt="IMAGEN PRODUCTO"
                                     width="150" height="150">
@@ -84,11 +83,11 @@
 
                    <button id='val' style="display:none;" type='button' class=' btn btn-info btn-sm ver_mas' title='Agregar'
                                             data-toggle="modal" data-target="#modal-default"><span
-                                                class='fa fa-search'>Emitir</span></button> 
+                                                class='fa fa-search'> VER MAS</span></button> 
 
                   <button id='reg' style="display:none;" type='button' class=' btn btn-danger btn-sm reg_sig' title='Agregar'
                                             data-toggle="modal" data-target="#modal-default"><span
-                                                class='fas fa-plus-circle'>Foto</span></button> 
+                                                class='fas fa-plus-circle'> REGISTRAR</span></button>  
 
                 <!-- <a id="reg" class="list-group-item reg_sig" style="display:none; color: red; margin:center;"> <span
                                                 class='fas fa-plus-circle'> Emitir</span></a> <br>  -->

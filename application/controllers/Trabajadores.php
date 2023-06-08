@@ -42,13 +42,14 @@ class Trabajadores extends CI_Controller {
 
         $filtr = $this->Trabajadores_model->trab_get($tra);
 
-		//print_r($filtr); die();
+	//	print_r($filtr); die();
 
         if ($filtr != NULL) {
 
 			$arr['cedula']  = "$filtr->ced_tra";
             $arr['txt_nom']  = $filtr->pri_nom . "  " . $filtr->seg_nom;
             $arr['ape_tra']  = $filtr->pri_ape . "  " . $filtr->seg_ape;
+			$arr['dep']  = $filtr->nom_dep2;
 	
 			if ($arr['fot_trab'] = pg_unescape_bytea($filtr->fot_tra)) {
             } else {
