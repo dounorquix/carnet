@@ -22,7 +22,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-10">
-                    <div class="col-md-7">
+                    <div class="col-md-7" style="margin-left: 223px;">
 
                         <div class="card card-info">
                             <div class="card-header">
@@ -47,24 +47,30 @@
 
 
 
-            <!-- Profile Image -->
-			<div id="fich_trab" class="card card-primary card-outline">
+                    <!-- Profile Image -->
+                    <div id="fich_trab" class="card card-primary card-outline" style="    margin-left: 116px;">
                         <div class="card-body box-profile">
-                            <div id="fot_tra" class="text-center">
+                            <div id="txt" class="text-center">
+							<div id="fot_tra" class="text-center">
                                 <?php if (@$filtr != null || @$filtr == null and @$filtr->fot_tra != null) {?>
-                                <img src="<?php print pg_unescape_bytea(@$filtr->fot_tra);?>" width="150"
-                                    height="150">
+                                <img src="<?php print pg_unescape_bytea(@$filtr->fot_tra);?>" width="100"
+                                    height="100">
                                 <?php } else {?>
-                                <img src='<?php print base_url() . "public/img/perfil.jpg";?>' alt="IMAGEN PRODUCTO"
-                                    width="150" height="150">
+                                <img src='<?php print base_url() . "public/img/perfil.jpg";?>' alt="IMAGEN PRODUCTO" style= "width:150px; height:150px;">
                                 <?php }?>
-                            </div><br>
-
+                            </div>
+								<br>
+								<br>
+								
+ <input maxlength="50" type="text"
+                                style="width: 100%; margin:auto; font-weight: bold; border: 0;" name="txt_pri_nom"
+                                id="cedu" disabled="disabled"><br>
                             <input maxlength="50" type="text"
-                                style="width: 100%; border: 0; margin:auto; font-weight: bold;" name="txt_pri_nom"
+                                style="width: 100%; margin:auto; font-weight: bold; border: 0;" name="txt_pri_nom"
                                 id="txt_pri_nom" disabled="disabled"><br>
+								
                             <input maxlength="50" type="text"
-                                style="width: 100%; border: 0; margin:auto; font-weight: bold;" name="txt_pri_ape"
+                                style="width: 100%; margin:auto; font-weight: bold; border: 0;" name="txt_pri_ape"
                                 id="txt_pri_ape" disabled="disabled"><br>
 
 
@@ -72,7 +78,7 @@
                                 <li class="list-group-item" style="">
                                     <b>Dependencia:</b> <br>
                                     <div id="texto" contenteditable="true"><input type="text"
-                                            style=" border: 0; width: 100%; height: 100%;" name="cod_dep " id="cod_dep"
+                                            style="width: 100%; height: 100%; border: 0;" name="cod_dep" id="cod_dep"
                                             disabled="disabled"></div>
                                     <br>
                                 </li>
@@ -81,13 +87,13 @@
                                     <li class="list-group-item">
                 <!-- <a id="val" class="list-group-item ver_mas" style="display:none; margin:center; ">&nbsp; VER MAS</a> -->
 
-                   <button id='val' style="display:none;" type='button' class=' btn btn-info btn-sm ver_mas' title='Agregar'
+                   <button id='val' name='val' style="display:none;" type='button' class=' btn btn-info btn-sm ver_mas' title='Agregar'
                                             data-toggle="modal" data-target="#modal-default"><span
-                                                class='fa fa-search'> VER MAS</span></button> 
+                                                class='fa fa-search'>Emitir</span></button> 
 
-                  <button id='reg' style="display:none;" type='button' class=' btn btn-danger btn-sm reg_sig' title='Agregar'
+                  <button id='reg' name='reg' style="display:none;" type='button' class=' btn btn-danger btn-sm reg_sig' title='Agregar'
                                             data-toggle="modal" data-target="#modal-default"><span
-                                                class='fas fa-plus-circle'> REGISTRAR</span></button>  
+                                                class='fas fa-plus-circle'>Foto</span></button> 
 
                 <!-- <a id="reg" class="list-group-item reg_sig" style="display:none; color: red; margin:center;"> <span
                                                 class='fas fa-plus-circle'> Emitir</span></a> <br>  -->

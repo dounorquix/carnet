@@ -79,8 +79,10 @@ class Usuarios extends CI_Controller {
         //die();
         try {
             if ($id_usua != NULL) {
+				
                 $resu = $this->Usuario_model->usua_dele($id_usu, $id_usua, $ip_act);
-
+				
+				
 
                 $arr['resu'] = $resu;
                 $arr['mens'] = "El registro ha sido eliminado.";
