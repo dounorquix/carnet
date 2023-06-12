@@ -63,7 +63,7 @@
 								<br>
 								
  <input maxlength="50" type="text"
-                                style="width: 100%; margin:auto; font-weight: bold; border: 0;" name="txt_pri_nom"
+                                style="width: 100%; margin:auto; font-weight: bold; border: 0;" name="ced"
                                 id="cedu" disabled="disabled"><br>
                             <input maxlength="50" type="text"
                                 style="width: 100%; margin:auto; font-weight: bold; border: 0;" name="txt_pri_nom"
@@ -87,13 +87,13 @@
                                     <li class="list-group-item">
                 <!-- <a id="val" class="list-group-item ver_mas" style="display:none; margin:center; ">&nbsp; VER MAS</a> -->
 
-                   <button id='val' name='val' style="display:none;" type='button' class=' btn btn-info btn-sm ver_mas' title='Agregar'
-                                            data-toggle="modal" data-target="#modal-default"><span
-                                                class='fa fa-search'>Emitir</span></button> 
+                   <button id='val' name='val' style="display:none;" type='button' class=' btn btn-info btn-sm emitir' title='Emitir'
+                                            data-toggle="modal" data-target="#modal-sm"><span
+                                                class='fa fa-search'> Emitir </span></button> 
 
-                  <button id='reg' name='reg' style="display:none;" type='button' class=' btn btn-danger btn-sm reg_sig' title='Agregar'
+                  <button id='reg' name='reg' style="display:none;" type='button' class=' btn btn-danger btn-sm reg_sig' title='ver mas'
                                             data-toggle="modal" data-target="#modal-default"><span
-                                                class='fas fa-plus-circle'>Foto</span></button> 
+                                                class='fas fa-plus-circle'> ver mas </span></button> 
 
                 <!-- <a id="reg" class="list-group-item reg_sig" style="display:none; color: red; margin:center;"> <span
                                                 class='fas fa-plus-circle'> Emitir</span></a> <br>  -->
@@ -119,29 +119,7 @@
         </div><!-- /.container-fluid -->
     </section>
 
-</div>
 
-
-<div class="modal fade" id="modal-xl" style="width: 100%;">
-    <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">Detalle de Salida</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <!-- Main content -->
-
-            </div>
-        
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-</div>
-<!-- /.modal -->
 
  <div class="modal fade" id="modal-default">
         <div class="modal-dialog">
@@ -171,7 +149,7 @@
         <div class="modal-dialog modal-sm">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title">Actualización de Tallas</h4>
+              <h4 class="modal-title"> Emitir Carnet</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -182,7 +160,7 @@
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
 
-            <button id="actu_talla" value="Guardar" type="button" class="btn btn-danger">Guardar</button>
+            <button id="actu_talla" value="Guardar" type="button" class="btn btn-danger"> Imprimir </button>
             </div>
           </div>
           <!-- /.modal-content -->

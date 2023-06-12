@@ -68,6 +68,28 @@ function buscar_trabajador(tra) {
 	});
 }
 
+$(document).on("click", ".emitir", function(){
+	 ced_tra = $("#txt_trab").val();
+
+	
+
+$.ajax({
+	url: 'trabajadores/carnet/',
+	type:"POST",
+	data: {ced_tra: ced_tra},
+	success: function(resp){
+		$("#modal-sm .modal-body").html(resp);
+
+
+	}
+
+});
+
+
+
+
+});
+
 function redireccion(contr, meth) {
 	location.replace("/Carnet/" + contr + (meth ? "/" + meth : ""));
  }
