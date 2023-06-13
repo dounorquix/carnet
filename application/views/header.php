@@ -9,6 +9,7 @@
   <link rel="icon" type="image/png" href="<?= base_url('public/login/images/icons/favicon.ico') ?>" />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="<?= base_url('public/Admin/plugins/fontawesome-free/css/all.min.css') ?>">
+	
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Tempusdominus Bootstrap 4 -->
@@ -26,6 +27,8 @@
   <link rel="stylesheet" href="<?= base_url('public/Admin/plugins/daterangepicker/daterangepicker.css') ?>">
   <!-- summernote -->
   <link rel="stylesheet" href="<?= base_url('public/Admin/plugins/summernote/summernote-bs4.min.css') ?>">
+
+	<link rel="stylesheet" href="<?= base_url('public/css/style_carnet.css') ?>">
 
     <link rel="stylesheet" type="text/css" href="<?= base_url('public/js/ext/resources/css/ext-all.css')?>" />
          <link rel="stylesheet" type="text/css" href="<?= base_url('public/js/ext/resources/css/xtheme-gray.css')?>" />
