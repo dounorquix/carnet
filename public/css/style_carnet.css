@@ -51,10 +51,12 @@
 	word-wrap: break-word;
 	font-weight: bold;
 
+
+
 }
 .depe{
 
-    margin-top: -139px;
+    /* margin-top: -139px;
     margin-left: -3px;
 	position: fixed;
      max-width: 100%; 
@@ -62,8 +64,14 @@
     word-wrap: break-word;
 	font-weight: bold;
 	line-height: 15px;
-	font-size:13px;
-
+	font-size:13px; */
+	margin-top: -139px;
+    text-align: center;
+    max-width: 100%;
+    word-wrap: break-word;
+	line-height: 15px;
+    width: 100%;
+    font-weight: bold;
 
 	
 }
