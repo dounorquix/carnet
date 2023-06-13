@@ -72,7 +72,6 @@ $(document).on("click", ".emitir", function(){
 	 ced_tra = $("#txt_trab").val();
 
 	
-
 $.ajax({
 	url: 'trabajadores/carnet/',
 	type:"POST",
