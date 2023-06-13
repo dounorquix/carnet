@@ -35,7 +35,9 @@ function buscar_trabajador(tra) {
 					$("#cedu").val(json.cedula);
 					$("#txt_pri_nom").val(json.txt_nom);
 					$("#txt_pri_ape").val(json.ape_tra);
-					$("#cod_dep").val(json.dep);
+					$("#area").val(json.area);
+					$("#cod_dep").val(json.depe);
+					$("#cargo").val(json.cargo);
 
 					if (json.btn_emi === 1){
 						document.getElementById('val').style.display = 'inline';     

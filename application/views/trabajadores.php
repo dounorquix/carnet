@@ -43,10 +43,8 @@
 						</div>
 					</div>
 
-
-
 					<!-- Profile Image -->
-					<div id="fich_trab" class="card card-primary card-outline" style="    margin-left: 116px;">
+					<div id="fich_trab" class="card card-primary card-outline" style=" margin-left: 116px;">
 						<div class="card-body box-profile">
 							<div id="txt" class="text-center">
 								<div id="fot_tra" class="text-center">
@@ -56,9 +54,7 @@
 										<img src='<?php print base_url() . "public/img/perfil.jpg"; ?>' alt="IMAGEN PRODUCTO" style="width:150px; height:150px;">
 									<?php } ?>
 								</div>
-								<br>
-								<br>
-
+							
 								<input maxlength="50" type="text" class="ficha" name="ced" id="cedu" disabled="disabled"><br>
 								<input maxlength="50" type="text" class="ficha" name="txt_pri_nom" id="txt_pri_nom" disabled="disabled"><br>
 
@@ -68,8 +64,14 @@
 								<ul class="list-group list-group-unbordered ">
 									<li class="list-group-item">
 										<b>Dependencia:</b> <br>
+										<div id="texto" contenteditable="true"><input type="text" class="ficha" name="area" id="area" disabled="disabled"></div>
 										<div id="texto" contenteditable="true"><input type="text" class="ficha" name="cod_dep" id="cod_dep" disabled="disabled"></div>
+					
+										<!-- &nbsp; -->
+										<b>Tipo de Personal:</b> <br>
+										<div id="texto" contenteditable="true"><input type="text" class="ficha" name="cargo" id="cargo" disabled="disabled"></div>
 										<br>
+										
 									</li>
 
 									<li>
