@@ -83,31 +83,15 @@ class Trabajadores extends CI_Controller {
 
 		$ced= $this->input->post('ced_tra');
 
-        $dato_emi = $this->Trabajadores_model->trab_get($ced);
+        $data["tra"] = $this->Trabajadores_model->trab_get($ced);
+
+	
+
+	
+	
 
 
-
-		// if ($col > 0) {
-        //     switch ($col) {
-        //         case 1:$color = imagecolorallocate($im, 255, 255, 0); //amarillo contratados
-        //             break;
-        //         case 2:$color = imagecolorallocate($im, 108, 117, 125); // gris personal de seguridad*
-        //             break;
-        //         case 3: $color = imagecolorallocate($im, 31, 20, 238); //azul empleados
-        //             break;
-        //         case 4: $color = imagecolorallocate($im, 102, 16, 242); //morado jubilados*
-        //             break;
-        //         case 5: $color = imagecolorallocate($im, 244, 6, 6); //rojo para presidencia vice-presidencia, gerente generales, gerente de linea, adjunto, jefes de areas, coordinadores.
-        //             break;
-        //         case 6: $color = imagecolorallocate($im, 4, 81, 15); //verde obreros.
-        //             break;
-        //     }
-		// }
-
-	//	print_r($dato_emi);
-
-
-		$this->load->view("carnets");
+		$this->load->view("carnets", $data);
 
 
 	}
