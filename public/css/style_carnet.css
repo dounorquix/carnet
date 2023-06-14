@@ -65,13 +65,14 @@
 	font-weight: bold;
 	line-height: 15px;
 	font-size:13px; */
-	margin-top: -139px;
+	top: -139px;
     text-align: center;
     max-width: 100%;
     word-wrap: break-word;
 	line-height: 15px;
     width: 100%;
     font-weight: bold;
+	position: relative;
 
 	
 }
