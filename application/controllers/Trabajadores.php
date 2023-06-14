@@ -83,12 +83,48 @@ class Trabajadores extends CI_Controller {
 
 		$ced= $this->input->post('ced_tra');
 
-        $data["tra"] = $this->Trabajadores_model->trab_get($ced);
+        $data['tra'] = $this->Trabajadores_model->trab_get($ced);
+
+		//print_r($data['tra']); die();
+
+		$ci_tra= 'V-'."".$data["tra"]->ced_tra;
+        $nom_ape = $data["tra"]->pri_nom." ".$data["tra"]->seg_nom." ".$data["tra"]->pri_ape." ".$data["tra"]->seg_ape;
+        $tip_per = $data["tra"]->nom_car;
+		$dep = $data["tra"]->nom_dep;
+		$eme ='En caso de emergencias llamar al:
+		(0239-5008429)(0239-5008330)';
+
+		$eme2 ='En Caso de Perdida, Extravio, Hurto o Robo Deberá Ser Notificado a la Oficina de seguridad al:
+		(0239-5008329)(0239-5008330)';
+
+		$minis = 'Ministerio del Poder Popular Para Transporte';
+
+$datos = "
+
+$ci_tra 
+
+$nom_ape
+
+$tip_per
+
+$dep
+
+$eme
+
+$eme2
+
+$minis
+";
+		
+	//	print $datos;
+		
+	//	die();
+
 
 	
+        $qr = $this->generate_qrcode($datos, $ci_tra);
 
-	
-	
+		//print_r($qr); die();
 
 
 		$this->load->view("carnets", $data);
@@ -105,14 +141,21 @@ class Trabajadores extends CI_Controller {
     | @param $data   QR Content
     |
     */
-	function generate_qrcode($data)
+	function generate_qrcode($datos, $ci_tra)
+
 	{
+
+		$ce = $ci_tra;
         /* Load QR Code Library */
-        $this->load->library('ciqrcode');
+		$this->load->library('ciqrcode');
+        
         
         /* Data */
-        $hex_data   = bin2hex($data);
+		//$ced= 24433001;
+        $hex_data   = $ce;
         $save_name  = $hex_data.'.png';
+
+		//chmod($save_name, 0777);
 
         /* QR Code File Directory Initialize */
         $dir = 'public/img/qrcode/';
@@ -129,93 +172,28 @@ class Trabajadores extends CI_Controller {
         $config['white']        = array(255,255,255);
         $this->ciqrcode->initialize($config);
   
+		
         /* QR Data  */
-        $params['data']     = $data;
+        $params['data']     = $datos;
         $params['level']    = 'L';
         $params['size']     = 3;
         $params['savename'] = FCPATH.$config['imagedir']. $save_name;
-        
         $this->ciqrcode->generate($params);
+    
 
         /* Return Data */
         $return = array(
-            'content' => $data,
+            'content' => $datos,
             'file'    => $dir. $save_name
         );
         return $return;
     }
     
-    /*
-    |-------------------------------------------------------------------
-    | Add Data
-    |-------------------------------------------------------------------
-    |
-    */
-	function add_data()
-	{
-        /* Generate QR Code */
-        $data = $this->input->post('content');
-        $qr   = $this->generate_qrcode($data);
 
-        /* Add Data */
-        if($this->Qr_model->insert_data($qr)) {
-            $this->modal_feedback('success', 'Success', 'Add Data Success', 'OK');
-        } else {
-            $this->modal_feedback('error', 'Error', 'Add Data Failed', 'Try again');
-        }
-        redirect('/');
 
-    }
+ 
 
-    /*
-    |-------------------------------------------------------------------
-    | Edit Data
-    |-------------------------------------------------------------------
-    |
-    | @param $id    ID Data
-    |
-    */
-	function edit_data($id)
-	{
-        /* Old QR Data */
-        $old_data = $this->Qr_model->fetch_data($id);
-        $old_file = $old_data['file'];
 
-        /* Generate New QR Code */
-        $data = $this->input->post('content');
-        $qr   = $this->generate_qrcode($data);
-
-        /* Edit Data */
-        if($this->Qr_model->update_data($id, $old_file, $qr)) {
-            $this->modal_feedback('success', 'Success', 'Edit Data Success', 'OK');
-        } else {
-            $this->modal_feedback('error', 'Error', 'Edit Data Failed', 'Try again');
-        }
-        redirect('/');
-    }
-
-    /*
-    |-------------------------------------------------------------------
-    | Remove Data
-    |-------------------------------------------------------------------
-    |
-    | @param $id    ID Data
-    |
-    */
-	function remove_data($id)
-	{
-        /* Current QR Data */
-        $qr_data = $this->Qr_model->fetch_data($id);
-        $qr_file = $qr_data['file'];
-
-        /* Delete Data */
-        if($this->Qr_model->delete_data($id, $qr_file)) {
-            $this->modal_feedback('success', 'Success', 'Delete Data Success', 'OK');
-        } else {
-            $this->modal_feedback('error', 'Error', 'Delete Data Failed', 'Try again');
-        }
-        redirect('/');
-	}
 
 	
 

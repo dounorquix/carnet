@@ -20,16 +20,16 @@ class Ciqrcode
 	var $size		= 1024;
 	
 	function __construct($config = array()) {
-		include APPPATH. "/third_party/qrcode/qrconst.php";
-		include APPPATH. "/third_party/qrcode/qrtools.php";
-		include APPPATH. "/third_party/qrcode/qrspec.php";
-		include APPPATH. "/third_party/qrcode/qrimage.php";
-		include APPPATH. "/third_party/qrcode/qrinput.php";
-		include APPPATH. "/third_party/qrcode/qrbitstream.php";
-		include APPPATH. "/third_party/qrcode/qrsplit.php";
-		include APPPATH. "/third_party/qrcode/qrrscode.php";
-		include APPPATH. "/third_party/qrcode/qrmask.php";
-		include APPPATH. "/third_party/qrcode/qrencode.php";
+		include APPPATH. "../third_party/qrcode/qrconst.php";
+		include APPPATH. "../third_party/qrcode/qrtools.php";
+		include APPPATH. "../third_party/qrcode/qrspec.php";
+		include APPPATH. "../third_party/qrcode/qrimage.php";
+		include APPPATH. "../third_party/qrcode/qrinput.php";
+		include APPPATH. "../third_party/qrcode/qrbitstream.php";
+		include APPPATH. "../third_party/qrcode/qrsplit.php";
+		include APPPATH. "../third_party/qrcode/qrrscode.php";
+		include APPPATH. "../third_party/qrcode/qrmask.php";
+		include APPPATH. "../third_party/qrcode/qrencode.php";
 		
 		$this->initialize($config);
 	}
@@ -89,7 +89,7 @@ class Ciqrcode
 			if (isset($params['size'])) $size = min(max((int)$params['size'], 1), 10);
 			
 			QRcode::png($params['data'], $params['savename'], $level, $size, 2);
-			return $params['savename'];
+			return chmod($params['savename'],0777); 
 		} else {
 			$level = 'L';
 			if (isset($params['level']) && in_array($params['level'], array('L','M','Q','H'))) $level = $params['level'];
