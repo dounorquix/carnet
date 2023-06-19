@@ -12,20 +12,6 @@
 }
 
 
-.foto{
-	position: absolute;
-    background-color: aliceblue;
-    margin-top: -412px;
-    margin-left: 97px;
-    border-width: 7px;
-    border-style: solid;
-     border-color: #bb0202; 
-    border-radius: 100%;
-    height: 120;
-    width: 120;
-    max-width: 100%;
-
-}
 
 .datos{
 
@@ -44,26 +30,7 @@ font-size: 16px;
 	
 }
 
-.cargo{
-
-	background-color: #bb0202;
-    border-color: #bb0202;
-    border-width: 187px;
-    position: absolute;
-    margin-top: -235px;
-    margin-left: 3px;
-    color: #bb0202;
-    width: 292px;
-    text-align: center;
-    max-width: 100%;
-    word-wrap: break-word;
-    font-weight: bold;
-    border: 5px solid #bb0202;
-
-}
 .depe{
-
-
 
 
 	/* prueba */
@@ -110,6 +77,40 @@ font-size: 16px;
         page-break-after: always;
     }
   }
+
+
+  /* codigo de colores con encargaduria */
+.foto{
+	position: absolute;
+    background-color: aliceblue;
+    margin-top: -412px;
+    margin-left: 97px;
+    border-width: 7px;
+    border-style: solid;
+     border-color: #bb0202; 
+    border-radius: 100%;
+    height: 120;
+    width: 120;
+    max-width: 100%;
+
+}
+.cargo{
+
+	background-color: #bb0202;
+    border-color: #bb0202;
+    border-width: 187px;
+    position: absolute;
+    margin-top: -235px;
+    margin-left: 3px;
+    color: #bb0202;
+    width: 292px;
+    text-align: center;
+    max-width: 100%;
+    word-wrap: break-word;
+    font-weight: bold;
+    border: 5px solid #bb0202;
+
+}
 
 
   /* codigo de colores contratados */
@@ -184,7 +185,7 @@ font-size: 16px;
 
 }
 
-  /* codigo de colores jubilados */
+  /* codigo de colores jubilados y pensionado*/
 
   .fotoj{
 	position: absolute;
@@ -193,7 +194,7 @@ font-size: 16px;
     margin-left: 97px;
     border-width: 7px;
     border-style: solid;
-     border-color: #0223cd;
+     border-color: #5f0092;
     border-radius: 100%;
     height: 120;
     width: 120;
@@ -204,18 +205,91 @@ font-size: 16px;
 
 
 
-	background-color: #0223cd;
-    border-color: #0223cd;
+	background-color: #5f0092;
+    border-color: #5f0092;
     border-width: 187px;
     position: absolute;
     margin-top: -235px;
     margin-left: 3px;
-    color: #0223cd;
+    color: #5f0092;
     width: 292px;
     text-align: center;
     max-width: 100%;
     word-wrap: break-word;
     font-weight: bold;
-    border: 5px solid #0223cd;
+    border: 5px solid #5f0092;
+
+}
+
+
+  /* codigo de colores obreros */
+
+  .fotoj{
+	position: absolute;
+    background-color: aliceblue;
+    margin-top: -412px;
+    margin-left: 97px;
+    border-width: 7px;
+    border-style: solid;
+     border-color: #0b7f04;
+    border-radius: 100%;
+    height: 120;
+    width: 120;
+    max-width: 100%;
+
+}
+.cargoj{
+
+
+
+	background-color: #0b7f04;
+    border-color: #0b7f04;
+    border-width: 187px;
+    position: absolute;
+    margin-top: -235px;
+    margin-left: 3px;
+    color: #0b7f04;
+    width: 292px;
+    text-align: center;
+    max-width: 100%;
+    word-wrap: break-word;
+    font-weight: bold;
+    border: 5px solid #0b7f04;
+
+}
+
+  /* codigo de colores seguridad */
+
+  .fotos{
+	position: absolute;
+    background-color: aliceblue;
+    margin-top: -412px;
+    margin-left: 97px;
+    border-width: 7px;
+    border-style: solid;
+     border-color: #535453;
+    border-radius: 100%;
+    height: 120;
+    width: 120;
+    max-width: 100%;
+
+}
+.cargos{
+
+
+
+	background-color: #535453;
+    border-color: #535453;
+    border-width: 187px;
+    position: absolute;
+    margin-top: -235px;
+    margin-left: 3px;
+    color: #535453;
+    width: 292px;
+    text-align: center;
+    max-width: 100%;
+    word-wrap: break-word;
+    font-weight: bold;
+    border: 5px solid #535453;
 
 }
