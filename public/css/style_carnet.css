@@ -1,79 +1,83 @@
 .qr{
-    margin-top: -90px;
-	margin-left: 9px;
+	margin-top: -102px;
+    margin-left: 10px;
     background-color: aliceblue;
-    position: fixed;
+    position: absolute;
     max-width: 100%;
-	border-width: 3px;
-	border-style: solid;
-	border-color: black;
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+
 
 }
 
 
 .foto{
-    position: fixed;
+	position: absolute;
     background-color: aliceblue;
-    margin-top: -347px;
-    margin-left: 78px;
-    border-width: 6px;
+    margin-top: -412px;
+    margin-left: 97px;
+    border-width: 7px;
     border-style: solid;
-    border-color: #bb0202;
+     border-color: #bb0202; 
     border-radius: 100%;
-    height: 130px;
-    width: 130px;
+    height: 120;
+    width: 120;
     max-width: 100%;
 
 }
 
 .datos{
 
-	margin-top: -213px;
-    margin-left: 59px;
-    position: fixed;
-    text-align: center;
-    max-width: 100%;
-	word-wrap: break-word;
-	font-weight: bold;
-	font-size:15px;
+
+
+text-align: center;
+max-width: 100%;
+word-wrap: break-word;
+
+width: 60%;
+font-weight: bold;
+position: absolute;
+margin-top: -286px;
+margin-left: 6px;
+font-size: 16px;
+	
 }
 
 .cargo{
 
 	background-color: #bb0202;
-    position: fixed;
-    margin-top: -171px;
-    margin-left: 32px;
-    color: aliceblue;
-    width: 206px;
+    border-color: #bb0202;
+    border-width: 187px;
+    position: absolute;
+    margin-top: -235px;
+    margin-left: 3px;
+    color: #bb0202;
+    width: 292px;
     text-align: center;
-	max-width: 100%;
-	word-wrap: break-word;
-	font-weight: bold;
-
-
+    max-width: 100%;
+    word-wrap: break-word;
+    font-weight: bold;
+    border: 5px solid #bb0202;
 
 }
 .depe{
 
-    /* margin-top: -139px;
-    margin-left: -3px;
-	position: fixed;
-     max-width: 100%; 
-    text-align: center;
-    word-wrap: break-word;
-	font-weight: bold;
-	line-height: 15px;
-	font-size:13px; */
-	top: -139px;
-    text-align: center;
+
+
+
+	/* prueba */
+	text-align: center;
     max-width: 100%;
     word-wrap: break-word;
-	line-height: 15px;
-    width: 100%;
+    line-height: 20px;
+    width: 60%;
     font-weight: bold;
-	position: relative;
-
+    position: absolute;
+    margin-top: -191px;
+    margin-left: 3px;
+    font-size: 16px;
+  
 	
 }
 
@@ -89,3 +93,129 @@
 	font-weight: bold;
 }
 
+
+/* medidas de impresion del carnet */
+@media print {
+    @page {
+      /* size: 210mm 297mm; */
+      margin: 10mm 197mm 10mm 10mm;
+      orphans: 0;
+      widows: 0;
+    }
+    .carnet {
+       zoom:90%;
+    }
+    .carnet:nth-child(even) { 
+        page-break-inside: avoid;
+        page-break-after: always;
+    }
+  }
+
+
+  /* codigo de colores contratados */
+
+  .fotoc{
+	position: absolute;
+    background-color: aliceblue;
+    margin-top: -412px;
+    margin-left: 97px;
+    border-width: 7px;
+    border-style: solid;
+     border-color: #ffc107; 
+    border-radius: 100%;
+    height: 120;
+    width: 120;
+    max-width: 100%;
+
+}
+.cargoc{
+
+
+
+	background-color: #ffc107;
+    border-color: #ffc107;
+    border-width: 187px;
+    position: absolute;
+    margin-top: -235px;
+    margin-left: 3px;
+    color: #ffc107;
+    width: 292px;
+    text-align: center;
+    max-width: 100%;
+    word-wrap: break-word;
+    font-weight: bold;
+    border: 5px solid #ffc107;
+
+}
+
+  /* codigo de colores empleados */
+
+  .fotoe{
+	position: absolute;
+    background-color: aliceblue;
+    margin-top: -412px;
+    margin-left: 97px;
+    border-width: 7px;
+    border-style: solid;
+     border-color: #0223cd;
+    border-radius: 100%;
+    height: 120;
+    width: 120;
+    max-width: 100%;
+
+}
+.cargoe{
+
+
+
+	background-color: #0223cd;
+    border-color: #0223cd;
+    border-width: 187px;
+    position: absolute;
+    margin-top: -235px;
+    margin-left: 3px;
+    color: #0223cd;
+    width: 292px;
+    text-align: center;
+    max-width: 100%;
+    word-wrap: break-word;
+    font-weight: bold;
+    border: 5px solid #0223cd;
+
+}
+
+  /* codigo de colores jubilados */
+
+  .fotoj{
+	position: absolute;
+    background-color: aliceblue;
+    margin-top: -412px;
+    margin-left: 97px;
+    border-width: 7px;
+    border-style: solid;
+     border-color: #0223cd;
+    border-radius: 100%;
+    height: 120;
+    width: 120;
+    max-width: 100%;
+
+}
+.cargoj{
+
+
+
+	background-color: #0223cd;
+    border-color: #0223cd;
+    border-width: 187px;
+    position: absolute;
+    margin-top: -235px;
+    margin-left: 3px;
+    color: #0223cd;
+    width: 292px;
+    text-align: center;
+    max-width: 100%;
+    word-wrap: break-word;
+    font-weight: bold;
+    border: 5px solid #0223cd;
+
+}

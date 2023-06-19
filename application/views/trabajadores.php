@@ -78,7 +78,7 @@
 									<li class="list-group-item">
 										<!-- <a id="val" class="list-group-item ver_mas" style="display:none; margin:center; ">&nbsp; VER MAS</a> -->
 
-										<button id='val' name='val' style="display:none;" type='button' class=' btn btn-info btn-sm emitir' title='Emitir' data-toggle="modal" data-target="#modal-sm"><span class='fa fa-share-square'> Emitir </span></button>
+										<button id='val' name='val' style="display:none;" type='button' class=' btn btn-info btn-sm emitir' title='Emitir' data-toggle="modal" data-target="#exampleModal1"><span class='fa fa-share-square'> Emitir </span></button>
 
 										<button id='reg' name='reg' style="display:none;" type='button' class=' btn btn-danger btn-sm reg_sig' title='ver mas' data-toggle="modal" data-target="#modal-default"><span class='fas fa-search'> ver mas </span></button>
 
@@ -132,26 +132,31 @@
 	<!-- /.modal -->
 
 
-	<div class="modal fade" id="modal-sm">
-		<div class="modal-dialog modal-sm">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h4 class="modal-title"> Emitir Carnet</h4>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
 
-				</div>
-				<div class="modal-footer justify-content-between">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
 
-					<button id="actu_talla" value="Guardar" type="button" class="btn btn-danger"> Imprimir </button>
-				</div>
-			</div>
-			<!-- /.modal-content -->
-		</div>
-		<!-- /.modal-dialog -->
-	</div>
-	<!-- /.modal -->
+
+	<!-- Button trigger modal -->
+
+
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            
+                <div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Emitir Carnet</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="margin-left: 85px;">
+              
+                </div>
+                <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+
+<button id="" value="Guardar" type="button" class="btn btn-danger btn-print"> Imprimir </button>
+                </div>
+           
+        </div>
+    </div>
+</div>

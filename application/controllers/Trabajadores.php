@@ -87,44 +87,20 @@ class Trabajadores extends CI_Controller {
 
 		//print_r($data['tra']); die();
 
-		$ci_tra= 'V-'."".$data["tra"]->ced_tra;
+		$ci_tra= $data["tra"]->ced_tra;
         $nom_ape = $data["tra"]->pri_nom." ".$data["tra"]->seg_nom." ".$data["tra"]->pri_ape." ".$data["tra"]->seg_ape;
         $tip_per = $data["tra"]->nom_car;
 		$dep = $data["tra"]->nom_dep;
-		$eme ='En caso de emergencias llamar al:
-		(0239-5008429)(0239-5008330)';
+		$eme ='En caso de emergencias llamar al (0239 5008429)(0239 5008330)';
 
-		$eme2 ='En Caso de Perdida, Extravio, Hurto o Robo Deberá Ser Notificado a la Oficina de seguridad al:
-		(0239-5008329)(0239-5008330)';
+		$eme2 ='En Caso de Perdida, Extravio, Hurto o Robo Debera Ser Notificado a la Oficina de seguridad al (0239 5008329)(0239 5008330)';
 
 		$minis = 'Ministerio del Poder Popular Para Transporte';
 
-$datos = "
-
-$ci_tra 
-
-$nom_ape
-
-$tip_per
-
-$dep
-
-$eme
-
-$eme2
-
-$minis
-";
-		
-	//	print $datos;
-		
-	//	die();
-
+        $datos = "V$ci_tra $nom_ape $tip_per $dep $eme $eme2 $minis";
 
 	
         $qr = $this->generate_qrcode($datos, $ci_tra);
-
-		//print_r($qr); die();
 
 
 		$this->load->view("carnets", $data);
@@ -148,10 +124,7 @@ $minis
 		$ce = $ci_tra;
         /* Load QR Code Library */
 		$this->load->library('ciqrcode');
-        
-        
-        /* Data */
-		//$ced= 24433001;
+
         $hex_data   = $ce;
         $save_name  = $hex_data.'.png';
 
@@ -176,7 +149,7 @@ $minis
         /* QR Data  */
         $params['data']     = $datos;
         $params['level']    = 'L';
-        $params['size']     = 3;
+        $params['size']     = 2;
         $params['savename'] = FCPATH.$config['imagedir']. $save_name;
         $this->ciqrcode->generate($params);
     
@@ -185,8 +158,11 @@ $minis
         $return = array(
             'content' => $datos,
             'file'    => $dir. $save_name
-        );
+        ); 
+
         return $return;
+
+		
     }
     
 

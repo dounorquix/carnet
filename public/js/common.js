@@ -79,7 +79,9 @@ $.ajax({
 	type:"POST",
 	data: {ced_tra: ced_tra},
 	success: function(resp){
-		$("#modal-sm .modal-body").html(resp);
+
+		
+		$("#exampleModal1 .modal-body").html(resp);
 
 
 	}
@@ -89,7 +91,18 @@ $.ajax({
 
 
 
+
+
+
 });
+
+
+$(document).on("click",".btn-print",function(){
+    $.print("#carnet");
+});
+
+
+
 
 function redireccion(contr, meth) {
 	location.replace("/Carnet/" + contr + (meth ? "/" + meth : ""));

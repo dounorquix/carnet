@@ -123,7 +123,7 @@
                 .css({
                     "position": "absolute",
                     "top": -999,
-                    "left": -999
+                    "left": -2000
                 });
         }
         var frameWindow = $iframe.get(0);

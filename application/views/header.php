@@ -29,6 +29,7 @@
   <link rel="stylesheet" href="<?= base_url('public/Admin/plugins/summernote/summernote-bs4.min.css') ?>">
 
 	<link rel="stylesheet" href="<?= base_url('public/css/style_carnet.css') ?>">
+	<link rel="stylesheet" href="<?= base_url('public/css/print.min.css') ?>">
 
     <link rel="stylesheet" type="text/css" href="<?= base_url('public/js/ext/resources/css/ext-all.css')?>" />
          <link rel="stylesheet" type="text/css" href="<?= base_url('public/js/ext/resources/css/xtheme-gray.css')?>" />

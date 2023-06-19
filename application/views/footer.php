@@ -85,14 +85,10 @@
 </script>
 <script src="<?= base_url('public/js/tabla/usuarios.js')?>"></script>
  <script src="<?= base_url('public/js/common.js')?>"></script> 
+ <script src="<?= base_url('public/js/print.min.js')?>"></script>
 
-  <!-- <script src="<?= base_url('public/js/tabla/entrada_lista2.js')?>"></script>
   
-   <script src="<?= base_url('public/js/tabla/entrada_producto_lista.js')?>"></script> 
-   <script src="<?= base_url('public/js/tabla/salida.js')?>"></script> 
-   <script src="<?= base_url('public/js/tabla/inventario_stock.js')?>"></script> 
-   <script src="<?= base_url('public/js/tabla/producto.js')?>"></script>
-   <script src="<?= base_url('public/js/tabla/usuario.js')?>"></script> -->
+ <script src="<?= base_url('public/js/tabla/usuario.js')?>"></script> 
   
 <!-- <script src="<?= base_url('public/js/common.js')?>"></script> -->
 
