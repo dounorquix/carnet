@@ -42,9 +42,16 @@ class Trabajadores extends CI_Controller {
 
         $filtr = $this->Trabajadores_model->trab_get($tra);
 
-//		print_r($filtr); die();
+//		print_r($filtr); die(); ucfirst(): convierte la primera letra de un cadena en mayuscula
+ 
 
         if ($filtr != NULL) {
+
+			
+
+			
+
+
 
 			$arr['cedula']  = "$filtr->ced_tra";
             $arr['txt_nom']  = $filtr->pri_nom . "  " . $filtr->seg_nom;
@@ -53,6 +60,15 @@ class Trabajadores extends CI_Controller {
 		    $arr['depe']  = "$filtr->nom_dep2";  //dependencia
 		    $arr['cargo']  = "$filtr->nom_car"; //descripcion del cargo
 		    $arr['id_tip_per']  = "$filtr->id_tip_per";//tipo de personal
+			
+
+                //  $e =$arr['txt_nom'];
+
+				//  $i=strtolower($e);
+				//  print ucwords($i);
+				 
+				//  die();
+
 			
 	
 			if ($arr['fot_trab'] = pg_unescape_bytea($filtr->fot_tra)) {
@@ -88,16 +104,20 @@ class Trabajadores extends CI_Controller {
 		//print_r($data['tra']); die();
 
 		$ci_tra= $data["tra"]->ced_tra;
+
         $nom_ape = $data["tra"]->pri_nom." ".$data["tra"]->seg_nom." ".$data["tra"]->pri_ape." ".$data["tra"]->seg_ape;
+
         $tip_per = $data["tra"]->nom_car;
+
 		$dep = $data["tra"]->nom_dep;
+
 		$eme ='En caso de emergencias llamar al (0239 5008429)(0239 5008330)';
 
 		$eme2 ='En Caso de Perdida, Extravio, Hurto o Robo Debera Ser Notificado a la Oficina de seguridad al (0239 5008329)(0239 5008330)';
 
 		$minis = 'Ministerio del Poder Popular Para Transporte';
 
-        $datos = "V$ci_tra $nom_ape $tip_per $dep $eme $eme2 $minis";
+        $datos = "V-$ci_tra $nom_ape $tip_per $dep $eme $eme2 $minis";
 
 	
         $qr = $this->generate_qrcode($datos, $ci_tra);

@@ -99,6 +99,8 @@ $.ajax({
 
 $(document).on("click",".btn-print",function(){
     $.print("#carnet");
+	
+
 });
 
 
